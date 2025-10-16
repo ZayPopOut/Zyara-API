@@ -1,62 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invite My Discord Bot</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #2c2f33;
-            color: #ffffff;
-            text-align: center;
-            padding: 50px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zyra Bot — Discord Assistant</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        h1 {
-            color: #7289da;
-        }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #23272a;
+      color: #fff;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
 
-        p {
-            font-size: 18px;
-            margin: 20px auto;
-            max-width: 600px;
-        }
+    header {
+      background: linear-gradient(135deg, #5865f2, #7289da);
+      padding: 80px 20px;
+      text-align: center;
+    }
 
-        .invite-button {
-            display: inline-block;
-            background: #7289da;
-            color: white;
-            text-decoration: none;
-            padding: 15px 30px;
-            font-size: 20px;
-            border-radius: 10px;
-            transition: background 0.3s ease;
-        }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
 
-        .invite-button:hover {
-            background: #5b6eae;
-        }
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      color: #dcdcdc;
+    }
 
-        footer {
-            margin-top: 50px;
-            font-size: 14px;
-            color: #999;
-        }
-    </style>
+    .invite-btn {
+      background: #2c2f33;
+      color: #fff;
+      text-decoration: none;
+      padding: 15px 35px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      border: 2px solid #7289da;
+    }
+
+    .invite-btn:hover {
+      background: #7289da;
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      color: #7289da;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .feature {
+      background: #2c2f33;
+      border-radius: 12px;
+      padding: 30px;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .feature:hover {
+      background: #3a3f45;
+      transform: translateY(-5px);
+    }
+
+    .feature h3 {
+      color: #5865f2;
+      margin-bottom: 10px;
+    }
+
+    .commands {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #2c2f33;
+      padding: 40px;
+      border-radius: 12px;
+      text-align: left;
+    }
+
+    .commands ul {
+      list-style: none;
+    }
+
+    .commands li {
+      padding: 10px 0;
+      border-bottom: 1px solid #3a3f45;
+    }
+
+    .commands strong {
+      color: #7289da;
+    }
+
+    footer {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #999;
+    }
+
+    .support-links a {
+      color: #7289da;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 500;
+    }
+
+    .support-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome to My Discord Bot</h1>
-    <p>
-        My bot helps you manage your server, have fun, and stay organized. Click the button below to invite the bot to your server!
-    </p>
-    <!-- Replace CLIENT_ID with your bot's client ID -->
-    <a class="invite-button" href="https://discord.com/oauth2/authorize?client_id=CLIENT_ID&scope=bot%20applications.commands&permissions=8" target="_blank">
-        Invite Bot
-    </a>
 
-    <footer>
-        &copy; 2025 Your Bot Name. All rights reserved.
-    </footer>
+  <!-- Hero -->
+  <header>
+    <h1>Zyra Bot</h1>
+    <p>Your all-in-one Discord bot for moderation, fun, and automation — powered by APIs, smart logging, and a custom dashboard.</p>
+    <a class="invite-btn" href="https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&scope=bot%20applications.commands&permissions=8" target="_blank">Invite Zyra</a>
+  </header>
+
+  <!-- Features -->
+  <section id="features">
+    <h2 class="section-title">✨ Features</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Moderation</h3>
+        <p>Kick, ban, timeout, warn, and auto-mod detection for spam and invite links.</p>
+      </div>
+      <div class="feature">
+        <h3>Fun Commands</h3>
+        <p>Games, memes, trivia, hug/slap reactions, and interactive commands powered by APIs.</p>
+      </div>
+      <div class="feature">
+        <h3>Dashboard</h3>
+        <p>Full web dashboard integration for managing settings, logs, and analytics in real-time.</p>
+      </div>
+      <div class="feature">
+        <h3>Custom API</h3>
+        <p>Seamlessly connects to other bots and systems for bot-to-bot communication and monitoring.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Commands -->
+  <section id="commands">
+    <h2 class="section-title">⚙️ Popular Commands</h2>
+    <div class="commands">
+      <ul>
+        <li><strong>/kick</strong> — Kick a member from the server.</li>
+        <li><strong>/ban</strong> — Ban a user with an optional reason.</li>
+        <li><strong>/warn</strong> — Issue a warning with logging support.</li>
+        <li><strong>/meme</strong> — Fetch a random meme from a meme API.</li>
+        <li><strong>/trivia</strong> — Start a trivia question with leaderboard tracking.</li>
+        <li><strong>/status</strong> — Get live bot status and uptime from API.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Support -->
+  <section id="support">
+    <h2 class="section-title">💬 Support & Community</h2>
+    <p>Need help or want to join our growing community?</p>
+    <div class="support-links">
+      <a href="https://discord.gg/YOURSUPPORTSERVER" target="_blank">Join Support Server</a> |
+      <a href="https://github.com/YOURGITHUB" target="_blank">View GitHub</a> |
+      <a href="#features">Back to Top</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Zyra Bot. All rights reserved. | Created by <a href="#" style="color:#7289da;text-decoration:none;">YourName</a>
+  </footer>
+
 </body>
 </html>
